@@ -7,5 +7,10 @@ class Player:
 
     def choose_gesture(self):
         self.chosen_gesture = input('Choose a gesture for your next turn:')
-        print(self.chosen_gesture)
+        if self.chosen_gesture not in ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']:
+            print('Incorrect entry')
+            self.choose_gesture()
+        
+        
+        
     
